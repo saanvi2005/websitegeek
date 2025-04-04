@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile | Nexus</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <a href="index.html" class="logo">Nex<span>us</span></a>
+            <div class="search-bar">
+                <input type="text" placeholder="Search communities, posts, or users...">
+            </div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="#">Popular</a>
+                <a href="#">Communities</a>
+                <a href="profile.html" class="active">Profile</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="profile-container">
+        <div class="profile-header">
+            <div class="profile-banner"></div>
+            <div class="profile-info">
+                <div class="profile-avatar">JS</div>
+                <div class="profile-details">
+                    <h1>Jane Smith</h1>
+                    <p class="username">u/jane_smith</p>
+                    <div class="profile-stats">
+                        <div class="stat">
+                            <span class="stat-number">1.2k</span>
+                            <span class="stat-label">Karma</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">42</span>
+                            <span class="stat-label">Posts</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">367</span>
+                            <span class="stat-label">Comments</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">2</span>
+                            <span class="stat-label">Years</span>
+                        </div>
+                    </div>
+                </div>
+                <button class="edit-profile-btn">Edit Profile</button>
+            </div>
+        </div>
+
+        <div class="profile-content">
+            <div class="profile-tabs">
+                <button class="tab-btn active" data-tab="posts">Posts</button>
+                <button class="tab-btn" data-tab="comments">Comments</button>
+                <button class="tab-btn" data-tab="saved">Saved</button>
+            </div>
+
+            <div class="tab-content active" id="posts-tab">
+                <!-- User Posts -->
+                <div class="post">
+                    <div class="post-header">
+                        <div class="community-icon">r/</div>
+                        <div class="post-info">
+                            <a href="#" class="community-name">technology</a>
+                            <div class="post-author">Posted by u/jane_smith • 2 days ago</div>
+                        </div>
+                    </div>
+                    <div class="post-content">
+                        <a href="#" class="post-title">Why I switched from VS Code to Neovim after 5 years</a>
+                        <p class="post-text">After using VS Code as my daily driver for years, I decided to give Neovim a serious try. Here's what I learned after 3 months of using it exclusively for web development...</p>
+                        <img src="https://source.unsplash.com/random/800x400/?coding,editor" alt="Code editor" class="post-image">
+                    </div>
+                    <div class="post-footer">
+                        <div class="vote-container">
+                            <button class="vote-btn upvote">↑</button>
+                            <span class="vote-count">487</span>
+                            <button class="vote-btn downvote">↓</button>
+                        </div>
+                        <div class="post-actions">
+                            <button class="action-btn">💬 124 Comments</button>
+                            <button class="action-btn">↗ Share</button>
+                            <button class="action-btn">🔖 Saved</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="post">
+                    <div class="post-header">
+                        <div class="community-icon">r/</div>
+                        <div class="post-info">
+                            <a href="#" class="community-name">webdev</a>
+                            <div class="post-author">Posted by u/jane_smith • 1 week ago</div>
+                        </div>
+                    </div>
+                    <div class="post-content">
+                        <a href="#" class="post-title">The complete guide to CSS Grid in 2023</a>
+                        <p class="post-text">I've been working with CSS Grid for years now, and I've compiled all my best tips, tricks, and gotchas into this comprehensive guide. Whether you're new to Grid or looking to deepen your knowledge, this guide has something for you.</p>
+                    </div>
+                    <div class="post-footer">
+                        <div class="vote-container">
+                            <button class="vote-btn upvote">↑</button>
+                            <span class="vote-count">1.1k</span>
+                            <button class="vote-btn downvote">↓</button>
+                        </div>
+                        <div class="post-actions">
+                            <button class="action-btn">💬 89 Comments</button>
+                            <button class="action-btn">↗ Share</button>
+                            <button class="action-btn">🔖 Saved</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-content" id="comments-tab">
+                <!-- User Comments -->
+                <div class="comment">
+                    <div class="comment-header">
+                        <span class="comment-context">Comment on <a href="#">"What's your favorite programming language and why?"</a> in <a href="#">r/programming</a></span>
+                        <span class="comment-time">3 days ago</span>
+                    </div>
+                    <div class="comment-content">
+                        <p>I've been really enjoying TypeScript lately. The type safety has saved me countless hours of debugging, and the developer experience with modern editors is fantastic. It's not perfect, but it strikes a great balance between productivity and reliability.</p>
+                    </div>
+                    <div class="comment-footer">
+                        <div class="vote-container">
+                            <button class="vote-btn upvote">↑</button>
+                            <span class="vote-count">42</span>
+                            <button class="vote-btn downvote">↓</button>
+                        </div>
+                        <div class="comment-actions">
+                            <button class="action-btn">💬 Reply</button>
+                            <button class="action-btn">↗ Share</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="comment">
+                    <div class="comment-header">
+                        <span class="comment-context">Comment on <a href="#">"Just finished my first React project"</a> in <a href="#">r/learnprogramming</a></span>
+                        <span class="comment-time">1 week ago</span>
+                    </div>
+                    <div class="comment-content">
+                        <p>Congrats on finishing your project! If you're looking for feedback, I'd suggest looking into React's useContext hook to avoid prop drilling. It can really clean up your component hierarchy when you're passing data down multiple levels.</p>
+                    </div>
+                    <div class="comment-footer">
+                        <div class="vote-container">
+                            <button class="vote-btn upvote">↑</button>
+                            <span class="vote-count">18</span>
+                            <button class="vote-btn downvote">↓</button>
+                        </div>
+                        <div class="comment-actions">
+                            <button class="action-btn">💬 Reply</button>
+                            <button class="action-btn">↗ Share</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-content" id="saved-tab">
+                <!-- Saved Content -->
+                <div class="empty-state">
+                    <div class="empty-icon">🔖</div>
+                    <h3>No saved items yet</h3>
+                    <p>When you save posts or comments, they'll appear here.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="profile.js"></script>
+</body>
+</html>
