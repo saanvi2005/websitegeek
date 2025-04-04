@@ -3,170 +3,121 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nexus - Discover Communities</title>
+    <title>Sign In | Nexus</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="auth.css">
 </head>
 <body>
     <header>
         <div class="navbar">
-            <a href="#" class="logo">Nex<span>us</span></a>
-            <div class="search-bar">
-                <input type="text" placeholder="Search communities, posts, or users...">
-            </div>
+            <a href="site.html" class="logo">Nex<span>us</span></a>
             <div class="nav-links">
-                <a href="#">Home</a>
+                <a href="site.html">Home</a>
                 <a href="#">Popular</a>
                 <a href="#">Communities</a>
-                <a href="profile.html">Profile</a>
             </div>
         </div>
     </header>
 
-    <div class="main-container">
-        <div class="content">
-            <!-- Post 1 -->
-            <div class="post">
-                <div class="post-header">
-                    <div class="community-icon">r/</div>
-                    <div class="post-info">
-                        <a href="#" class="community-name">technology</a>
-                        <div class="post-author">Posted by u/tech_enthusiast • 5 hours ago</div>
-                    </div>
-                </div>
-                <div class="post-content">
-                    <a href="#" class="post-title">The future of AI: How large language models are changing everything</a>
-                    <p class="post-text">Recent advancements in AI have led to models that can understand and generate human-like text with unprecedented accuracy. This has implications across industries from customer service to education.</p>
-                    <img src="https://source.unsplash.com/random/800x400/?ai,technology" alt="AI technology" class="post-image">
-                </div>
-                <div class="post-footer">
-                    <div class="vote-container">
-                        <button class="vote-btn upvote">↑</button>
-                        <span class="vote-count">1.2k</span>
-                        <button class="vote-btn downvote">↓</button>
-                    </div>
-                    <div class="post-actions">
-                        <button class="action-btn">💬 342 Comments</button>
-                        <button class="action-btn">↗ Share</button>
-                        <button class="action-btn">🔖 Save</button>
-                    </div>
-                </div>
+    <div class="auth-container">
+        <div class="auth-card">
+            <div class="auth-tabs">
+                <button class="auth-tab-btn active" data-tab="login">Sign In</button>
+                <button class="auth-tab-btn" data-tab="signup">Sign Up</button>
             </div>
 
-            <!-- Post 2 -->
-            <div class="post">
-                <div class="post-header">
-                    <div class="community-icon">r/</div>
-                    <div class="post-info">
-                        <a href="#" class="community-name">science</a>
-                        <div class="post-author">Posted by u/astro_researcher • 12 hours ago</div>
-                    </div>
+            <!-- Login Form -->
+            <form id="login-form" class="auth-form active">
+                <div class="auth-header">
+                    <h2>Welcome back</h2>
+                    <p>Sign in to your Nexus account</p>
                 </div>
-                <div class="post-content">
-                    <a href="#" class="post-title">NASA's James Webb Telescope discovers potential signs of life on exoplanet K2-18b</a>
-                    <p class="post-text">The telescope's latest observations have detected molecules in the planet's atmosphere that could only be produced by living organisms. Further study is needed to confirm these findings.</p>
-                </div>
-                <div class="post-footer">
-                    <div class="vote-container">
-                        <button class="vote-btn upvote">↑</button>
-                        <span class="vote-count">8.7k</span>
-                        <button class="vote-btn downvote">↓</button>
-                    </div>
-                    <div class="post-actions">
-                        <button class="action-btn">💬 1.4k Comments</button>
-                        <button class="action-btn">↗ Share</button>
-                        <button class="action-btn">🔖 Save</button>
-                    </div>
-                </div>
-            </div>
 
-            <!-- Post 3 -->
-            <div class="post">
-                <div class="post-header">
-                    <div class="community-icon">r/</div>
-                    <div class="post-info">
-                        <a href="#" class="community-name">programming</a>
-                        <div class="post-author">Posted by u/dev_expert • 1 day ago</div>
-                    </div>
+                <div class="form-group">
+                    <label for="login-username">Username or Email</label>
+                    <input type="text" id="login-username" required>
                 </div>
-                <div class="post-content">
-                    <a href="#" class="post-title">Show HN: I built a tool that automatically documents your code using AI</a>
-                    <p class="post-text">After years of struggling with documentation, I created DocuGen which analyzes your codebase and generates comprehensive documentation in multiple formats. It supports 15+ programming languages and integrates with GitHub/GitLab.</p>
-                    <img src="https://source.unsplash.com/random/800x400/?code,programming" alt="Programming code" class="post-image">
-                </div>
-                <div class="post-footer">
-                    <div class="vote-container">
-                        <button class="vote-btn upvote">↑</button>
-                        <span class="vote-count">3.5k</span>
-                        <button class="vote-btn downvote">↓</button>
-                    </div>
-                    <div class="post-actions">
-                        <button class="action-btn">💬 892 Comments</button>
-                        <button class="action-btn">↗ Share</button>
-                        <button class="action-btn">🔖 Save</button>
-                    </div>
-                </div>
-            </div>
-        </div>
 
-        <div class="sidebar">
-            <div class="sidebar-card">
-                <div class="sidebar-header">
-                    Popular Communities
+                <div class="form-group">
+                    <label for="login-password">Password</label>
+                    <input type="password" id="login-password" required>
+                    <a href="#" class="forgot-password">Forgot password?</a>
                 </div>
-                <div class="sidebar-content">
-                    <div class="sidebar-item">
-                        <a href="#" class="community-item">
-                            <div class="sidebar-icon">r/</div>
-                            <span>technology</span>
-                        </a>
-                    </div>
-                    <div class="sidebar-item">
-                        <a href="#" class="community-item">
-                            <div class="sidebar-icon">r/</div>
-                            <span>science</span>
-                        </a>
-                    </div>
-                    <div class="sidebar-item">
-                        <a href="#" class="community-item">
-                            <div class="sidebar-icon">r/</div>
-                            <span>programming</span>
-                        </a>
-                    </div>
-                    <div class="sidebar-item">
-                        <a href="#" class="community-item">
-                            <div class="sidebar-icon">r/</div>
-                            <span>worldnews</span>
-                        </a>
-                    </div>
-                    <div class="sidebar-item">
-                        <a href="#" class="community-item">
-                            <div class="sidebar-icon">r/</div>
-                            <span>movies</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
 
-            <div class="sidebar-card">
-                <div class="sidebar-header">
-                    Trending Today
-                </div>
-                <div class="sidebar-content">
-                    <a href="#" class="trending-tag">#AI</a>
-                    <a href="#" class="trending-tag">#Space</a>
-                    <a href="#" class="trending-tag">#Tech</a>
-                    <a href="#" class="trending-tag">#Science</a>
-                    <a href="#" class="trending-tag">#Programming</a>
-                    <a href="#" class="trending-tag">#WebDev</a>
-                    <a href="#" class="trending-tag">#Innovation</a>
-                    <a href="#" class="trending-tag">#Future</a>
-                </div>
-            </div>
+                <button type="submit" class="auth-btn">Sign In</button>
 
-            <button class="create-post-btn">Create Post</button>
+                <div class="auth-divider">
+                    <span>OR</span>
+                </div>
+
+                <div class="social-auth">
+                    <button type="button" class="social-btn google">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" alt="Google">
+                        Continue with Google
+                    </button>
+                    <button type="button" class="social-btn github">
+                        <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub">
+                        Continue with GitHub
+                    </button>
+                </div>
+            </form>
+
+            <!-- Signup Form -->
+            <form id="signup-form" class="auth-form">
+                <div class="auth-header">
+                    <h2>Create your account</h2>
+                    <p>Join the Nexus community</p>
+                </div>
+
+                <div class="form-group">
+                    <label for="signup-email">Email</label>
+                    <input type="email" id="signup-email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="signup-username">Username</label>
+                    <input type="text" id="signup-username" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="signup-password">Password</label>
+                    <input type="password" id="signup-password" required>
+                    <div class="password-hints">
+                        <span class="hint">• 8+ characters</span>
+                        <span class="hint">• 1 uppercase letter</span>
+                        <span class="hint">• 1 number</span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="signup-confirm">Confirm Password</label>
+                    <input type="password" id="signup-confirm" required>
+                </div>
+
+                <button type="submit" class="auth-btn">Sign Up</button>
+
+                <div class="auth-divider">
+                    <span>OR</span>
+                </div>
+
+                <div class="social-auth">
+                    <button type="button" class="social-btn google">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" alt="Google">
+                        Continue with Google
+                    </button>
+                    <button type="button" class="social-btn github">
+                        <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub">
+                        Continue with GitHub
+                    </button>
+                </div>
+
+                <div class="auth-footer">
+                    By signing up, you agree to our <a href="#">Terms</a> and <a href="#">Privacy Policy</a>.
+                </div>
+            </form>
         </div>
     </div>
 
-    <script src="script.js"></script>
+    <script src="auth.js"></script>
 </body>
 </html>
