@@ -33,7 +33,7 @@ document.getElementById('login-form').addEventListener('submit', function(e) {
     console.log('Login attempt with:', { username, password });
     
     // Redirect to home page
-    window.location.href = 'index.html';
+    window.location.href = 'site.html';
 });
 
 // Signup form submission
@@ -95,6 +95,6 @@ function simulateSignup() {
     
     // Redirect after signup
     setTimeout(() => {
-        window.location.href = 'index.html';
+        window.location.href = 'site.html';
     }, 2000);
 }
